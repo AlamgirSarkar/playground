@@ -40,7 +40,7 @@ export class Container extends React.Component<ContainerProps, ContainerState> {
     const hash = this.locationHash;
     const json = LZString.decompressFromEncodedURIComponent(hash);
     try {
-      const payload = JSON.parse(json) || {};
+      const payload = JSON.parse(json as string) || {};
       console.log("loaded state", payload);
       return payload;
     } catch (error) {

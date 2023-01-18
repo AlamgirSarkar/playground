@@ -33,9 +33,9 @@ export class Playground extends React.Component<
 
   constructor(props: PlaygroundProps) {
     super(props);
-    this.beautify = _.throttle(this.beautify, this.throttleDelay, {
+    this.beautify =this.beautify, this.throttleDelay, {
       trailing: true,
-    });
+    }
   }
 
   state: PlaygroundState = this.initState(this.props);
